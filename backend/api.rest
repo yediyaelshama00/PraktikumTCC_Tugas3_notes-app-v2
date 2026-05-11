@@ -43,6 +43,47 @@ Content-Type: application/json
 
 ###
 
-# GET : Semua Catatan 
+### CLOUD RUN TESTING ###
+
+# Health Check
+GET https://backend-123230174-483373393260.asia-southeast2.run.app HTTP/1.1
+
+###
+
+# GET : Semua Catatan
 GET https://backend-123230174-483373393260.asia-southeast2.run.app/api/v1/catatan HTTP/1.1
+Content-Type: application/json
+
+###
+
+# GET : Catatan by ID
+GET https://backend-123230174-483373393260.asia-southeast2.run.app/api/v1/catatan/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+# POST : Tambah Catatan
+POST https://backend-123230174-483373393260.asia-southeast2.run.app/api/v1/catatan HTTP/1.1
+Content-Type: application/json
+
+{
+  "judul": "Catatan dari Cloud",
+  "isi": "Ini catatan yang ditambahkan lewat Cloud Run."
+}
+
+###
+
+# PUT : Edit Catatan
+PUT https://backend-123230174-483373393260.asia-southeast2.run.app/api/v1/catatan/6 HTTP/1.1
+Content-Type: application/json
+
+{
+  "judul": "Catatan Diedit",
+  "isi": "Isi catatan sudah diubah lewat Cloud Run."
+}
+
+###
+
+# DELETE : Hapus Catatan
+DELETE https://backend-123230174-483373393260.asia-southeast2.run.app/api/v1/catatan/6 HTTP/1.1
 Content-Type: application/json

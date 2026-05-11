@@ -1,6 +1,10 @@
 runtime: nodejs20
 service: frontend-123230174
 
+automatic_scaling:
+  min_instances: 0
+  max_instances: 1
+
 handlers:
   - url: /
     static_files: index.html
