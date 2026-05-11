@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>📝 Notes App</h1>
+      <p>Catat hal penting dengan mudah</p>
+    </div>
+
+    <!-- Form Tambah / Edit -->
+    <div class="card form-card">
+      <h2 id="form-title">Tambah Catatan</h2>
+      <input type="hidden" id="edit-id" />
+      <div class="form-group">
+        <label for="judul">Judul</label>
+        <input type="text" id="judul" placeholder="Masukkan judul catatan..." />
+      </div>
+      <div class="form-group">
+        <label for="isi">Isi Catatan</label>
+        <textarea id="isi" rows="4" placeholder="Tulis isi catatan di sini..."></textarea>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" onclick="submitCatatan()">Simpan</button>
+        <button class="btn btn-secondary" id="cancel-btn" onclick="cancelEdit()" style="display:none">Batal</button>
+      </div>
+    </div>
+
+    <!-- Daftar Catatan -->
+    <div class="notes-section">
+      <h2>Daftar Catatan <span id="notes-count" class="badge">0</span></h2>
+      <div id="notes-list" class="notes-grid">
+        <!-- Catatan akan muncul di sini -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

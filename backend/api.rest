@@ -1,0 +1,42 @@
+# API Testing - Notes App
+GET http://localhost:3000/ HTTP/1.1
+
+###
+
+# GET : Semua Catatan
+GET http://localhost:3000/api/v1/catatan HTTP/1.1
+Content-Type: application/json
+
+###
+
+# GET : Catatan by ID
+GET http://localhost:3000/api/v1/catatan/5 HTTP/1.1
+Content-Type: application/json
+
+###
+
+# POST : Tambah Catatan
+POST http://localhost:3000/api/v1/catatan HTTP/1.1
+Content-Type: application/json
+
+{
+  "judul": "Catatan Pertama",
+  "isi": "Iki catatan pertama yoo."
+}
+
+###
+
+# PUT : Edit Catatan
+PUT http://localhost:3000/api/v1/catatan/5 HTTP/1.1
+Content-Type: application/json
+
+{
+  "judul": "Catatan Pertama (Edited)",
+  "isi": "Catatan pertama wes diedit."
+}
+
+###
+
+# DELETE : Hapus Catatan
+DELETE http://localhost:3000/api/v1/catatan/5 HTTP/1.1
+Content-Type: application/json

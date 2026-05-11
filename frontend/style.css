@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: #718096;
+  font-size: 1rem;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: 32px;
+}
+
+.form-card h2 {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5a67d8;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e0;
+}
+
+.btn-edit {
+  background: #f6ad55;
+  color: white;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+}
+
+.btn-edit:hover {
+  background: #ed8936;
+}
+
+.btn-delete {
+  background: #fc8181;
+  color: white;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+}
+
+.btn-delete:hover {
+  background: #f56565;
+}
+
+/* Notes Section */
+.notes-section h2 {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  background: #667eea;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 99px;
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.note-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-left: 4px solid #667eea;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+}
+
+.note-card h3 {
+  font-size: 1rem;
+  color: #2d3748;
+  word-break: break-word;
+}
+
+.note-card p {
+  font-size: 0.9rem;
+  color: #718096;
+  line-height: 1.5;
+  word-break: break-word;
+  flex: 1;
+}
+
+.note-card .note-date {
+  font-size: 0.78rem;
+  color: #a0aec0;
+}
+
+.note-card .note-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 48px 0;
+  color: #a0aec0;
+  grid-column: 1 / -1;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  margin-top: 8px;
+}
