@@ -6,8 +6,13 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost', 'http://localhost:5173', 'http://127.0.0.1:5500'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: [
+    'http://localhost',
+    'http://localhost:5173',
+    'http://127.0.0.1:5500',
+    'https://frontend-123230174-dot-h-03-488115.et.r.appspot.com'
+  ],
+  methods: ['GET', 'POST', 'PUT','DELETE'],
   credentials: true,
 }));
 
