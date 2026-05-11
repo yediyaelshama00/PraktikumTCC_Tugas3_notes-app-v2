@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/v1/catatan';
+const API_URL = 'https://backend-123230174-483373393260.asia-southeast2.run.app/api/v1/catatan';
 
 // Ambil semua catatan saat halaman dibuka
 document.addEventListener('DOMContentLoaded', fetchCatatan);
